@@ -1,0 +1,19 @@
+<button  type="button" class="btn btn-primary"   (click)="getAll()" >Display All Players</button>
+<div class="container">
+    <table class="table table-primary col-sm-5">
+       <tr><th>SNO.</th><th>PLAYERID</th><th>PLAYERNAME</th><th>JERSEYNUMBER</th><th>ROLE</th>
+        <th>TEAMNAME</th> 
+        <th>COUNTRYNAME</th> 
+        <th>DESCRIPTION</th> 
+        
+    <tr *ngFor="let player of allPlayers; index as i">
+        <td>{{i+1}}</td>
+        <td>{{player.playerId}}</td>
+        <td>{{player.playerName}}</td>
+        <td>{{player.jerseyNumber}}</td>
+        <td>{{player.role}}</td> 
+        <td>{{player.teamName}}</td>
+        <td>{{player.countryName}}</td>
+        <td>{{player.description}}</td>
+    </tr>
+    </table>
