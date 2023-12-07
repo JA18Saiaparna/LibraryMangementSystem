@@ -1,0 +1,41 @@
+<button type="button" class="btn btn-primary" (click)="getAllBooks()">Display All Books</button>
+
+<div class="container">
+  <table class="table table-primary col-sm-5">
+    <tr>
+      <th>SNO.</th>
+      <th>Book ID</th>
+      <th>Book Title</th>
+      <th>Author</th>
+      <th>Subject</th>
+      <th>ISBN</th>
+      <th>Publisher</th>
+      <th>Publication Date</th>
+      <th>Quantity</th>
+      <th>Available Quantity</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let book of bookList; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ book.bookid }}</td>
+      <td>{{ book.booktitle }}</td>
+      <td>{{ book.bookauthor }}</td>
+      <td>{{ book.subject }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.publisher }}</td>
+      <td>{{ book.publicationdate }}</td>
+      <td>{{ book.quantity }}</td>
+      <td>{{ book.availablequantity }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-danger" style="background-color: red" (click)="deleteBook(book.bookid)">Delete</button>
+          <button type="button" class="btn btn-info" (click)="updateBook(book.bookid)">Update</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+ 
+   
+  
+</div>
+

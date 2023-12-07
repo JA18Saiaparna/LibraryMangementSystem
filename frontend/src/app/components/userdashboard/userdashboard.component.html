@@ -1,0 +1,43 @@
+<div class="dashboard">
+    <div class="card">
+      <h3>Borrow Books</h3>
+      <p>Borrow Books Here</p>
+      <button  class="custom-button" (click)="borrowBooks()">Borrow Books</button>
+    </div>
+  
+    <!--<div class="card">
+      <h3>Return Book</h3>
+      <p>Return the books you've borrowed here.</p>
+      <button (click)="returnBooks()">Return Books</button>
+    </div>
+  
+    <div class="card">
+      <h3>View My Account</h3>
+      <p>Access your account details and transaction history.</p>
+      <button (click)="viewAccount()">View Account</button>
+    </div>
+
+    <div class="card">
+      <h3>Pay Fine</h3>
+      <p>Clear any fines or dues on your account.</p>
+      <button (click)="payFine()">Pay Fine</button>
+    </div>-->
+
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <form class="d-flex"  #searchInput="ngForm" (ngSubmit)="findBooks(searchInput)">
+          <input class="form-control me-2" type="search" name="data"  ngModel  placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  
+    
+
+    <div class="card">
+        <h3>View all books</h3>
+        <p>view all books here</p>
+        <button  class="custom-button" (click)="displayall()">View Books</button>
+      </div>
+  </div>
+  
