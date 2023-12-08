@@ -36,4 +36,8 @@ export class ManagebooksComponent {
     
 
 }
+goBack()
+      {
+        this.router.navigate(['/admindashboard'])
+      }
 }

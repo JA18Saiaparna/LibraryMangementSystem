@@ -1,6 +1,6 @@
 <br>
 <div  class="container  col-lg-4">
-  <h2 style="text-align:center">Login Page</h2>
+  <h2 style="text-align:center">AdminLogin Page</h2>
     <form   #formData=ngForm  (ngSubmit)="readFormData(formData)" >
         <div class="form-group">
           <label for="exampleInputEmail1">UserName</label>
@@ -14,7 +14,7 @@
           <span style="color:red"   *ngIf="pwd.touched && pwd.invalid" >Password is mandartory</span>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid"  >Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid"  >Login</button>
         
       </form>
      

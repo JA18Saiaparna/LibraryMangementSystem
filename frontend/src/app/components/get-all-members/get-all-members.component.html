@@ -15,8 +15,8 @@
       <td>{{ borrow.borrowingid }}</td>
       <td>{{ borrow.duedate }}</td>
       <td>{{ borrow.returndate }}</td>
-      <td>{{ borrow.bookid }}</td>
-      <td>{{ borrow.memberid }}</td>
+      <td>{{ borrow.book.bookid }}</td>
+      <td>{{ borrow.member.memberid }}</td>
       <td>
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-danger" style="background-color: red" (click)="deleteMember(borrow.borrowingid)">Delete</button>

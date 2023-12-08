@@ -19,6 +19,11 @@ export class AdmindashboardComponent {
     this.router.navigate(['/manageusers']); 
   }
 
+goBack()
+{
+  this.router.navigate(['/welcome'])
+}
+
 
 
 }

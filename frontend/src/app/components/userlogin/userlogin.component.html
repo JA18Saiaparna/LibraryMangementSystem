@@ -14,8 +14,8 @@
           <span style="color:red"   *ngIf="pwd.touched && pwd.invalid" >Password is mandartory</span>
         </div>
         <br>
-        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid"  >Submit</button>
-        <a routerLink="/userregister" class="ml-2">New User? Register Here</a>
+        <button type="submit" class="btn btn-primary" [disabled]="formData.invalid"  >Login</button>
+        <a routerLink="/userregister" class="ml-2" style="color:black;">New User? Register Here</a>
         <button *ngIf="isLoggedIn!=false" (click)="logout()" style="color:black;">Logout</button>
 
       </form>

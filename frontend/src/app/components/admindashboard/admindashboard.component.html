@@ -2,17 +2,19 @@
  
   <div class="card">
       <h3>Manage Users</h3>
-      <p>Manage users' accounts and information.</p>
-      <button (click)="manageUsers()">Manage Users</button>
+      <p >Manage users' accounts and information.</p>
+      <button (click)="manageUsers()" style="color:black">Manage Users</button>
   </div>
 
  
   <div class="card">
       <h3>Manage Books</h3>
       <p>Manage the library's book inventory.</p>
-      <button (click)="manageBooks()">Manage Books</button>
+      <button (click)="manageBooks()" style="color:black">Manage Books</button>
   </div>
 
-  
+  <div class="custom-button">
+    <button type="submit" class="btn btn-primary transparent-button" (click)="goBack()" style="margin-left: 20px; color:black;"><i class="fa-solid fa-arrow-left"></i>Back</button>
+    </div>
   
 </div>
