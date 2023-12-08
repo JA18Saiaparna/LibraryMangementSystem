@@ -15,4 +15,8 @@ export class ManageusersComponent {
 viewAllUsers(){
   this.router.navigate(['/get-all-members']);
 }
+goBack()
+      {
+        this.router.navigate(['/admindashboard'])
+      }
 }

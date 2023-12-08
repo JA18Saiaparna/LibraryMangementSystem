@@ -53,5 +53,9 @@ export class AddusersComponent {
       console.error('Form invalid. Cannot submit.');
     }
   }
+  goBack()
+      {
+        this.router.navigate(['/manageusers'])
+      }
   
 }

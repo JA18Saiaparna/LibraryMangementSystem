@@ -8,7 +8,7 @@
     width:1200px;
     padding-left:100px;
 }
-/* Style for dashboard container */
+
 .dashboard {
     display: flex;
     justify-content: space-around;
@@ -30,19 +30,19 @@
     background-color: #fff;
   }
   
-  /* Style for card headings */
+ 
   .card h3 {
     margin-top: 0;
     font-size: 1.5em;
     color: #333;
   }
   
-  /* Style for card paragraphs */
+ 
   .card p {
     color: #666;
   }
   
-  /* Style for card buttons */
+  
   .card button {
     padding: 8px 16px;
     margin-top: 10px;
@@ -54,7 +54,7 @@
     transition: background-color 0.3s ease;
   }
   
-  /* Hover effect for buttons */
+ 
   .card button:hover {
     background-color: #0056b3;
   }

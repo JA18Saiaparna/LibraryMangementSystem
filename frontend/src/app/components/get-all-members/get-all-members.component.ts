@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Borrow } from 'src/app/model/borrow';
 import { BorrowbooksService } from 'src/app/services/borrowbooks.service';
@@ -8,9 +8,12 @@ import { BorrowbooksService } from 'src/app/services/borrowbooks.service';
   templateUrl: './get-all-members.component.html',
   styleUrls: ['./get-all-members.component.css']
 })
-export class GetAllMembersComponent {
+export class GetAllMembersComponent implements OnInit {
   memberList:Borrow[] = [];
   constructor(private router:Router,private borrowService:BorrowbooksService){}
+  ngOnInit(): void {
+   this.getAllMembers();
+  }
   getAllMembers(){
     
     this.borrowService.getAll().subscribe( 
@@ -30,9 +33,12 @@ deleteMember(memberid:number){
    console.log("BorrowingID of member is deleted");
     
     alert("BorrowingID of Member is deleted");
-  });
+  });}
+  goBack()
+  {
+    this.router.navigate(['/managebooks'])
+  }
 
 
-}
 }
 

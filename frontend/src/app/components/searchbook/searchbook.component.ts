@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from 'src/app/model/Book';
 import { BookService } from 'src/app/services/book.service';
 
@@ -9,7 +9,7 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./searchbook.component.css']
 })
 export class SearchbookComponent {
-  constructor(private bookService:BookService,private route:ActivatedRoute,){}
+  constructor(private bookService:BookService,private route:ActivatedRoute,private router:Router){}
   bookSearchList:Book[] =[];
   ngOnInit(): void {
      
@@ -32,5 +32,9 @@ searchInput:string = '';
       }
     );
   }
+  goBack()
+      {
+        this.router.navigate(['/managebooks'])
+      }
   
 }

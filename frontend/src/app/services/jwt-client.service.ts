@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,19 @@ export class JwtClientService {
   constructor(private http:HttpClient) { }
   baseURL:string = 'http://localhost:8181/api/';
   
+  private isLoggedInSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  isLoggedIn$: Observable<boolean> = this.isLoggedInSubject.asObservable();
+
+  
+
+  setLoggedIn(value: boolean) {
+    this.isLoggedInSubject.next(value);
+  }
+
+  get isLoggedIn(): boolean {
+    return this.isLoggedInSubject.value;
+  }
+
 
     getGeneratedToken(requestBody: any):Observable<string>{
 
@@ -20,6 +33,7 @@ export class JwtClientService {
     storeToken(token: string): void {
       localStorage.setItem(this.tokenKey,token);
     }
+   
   
     getToken(): string | null {
       return localStorage.getItem(this.tokenKey);
