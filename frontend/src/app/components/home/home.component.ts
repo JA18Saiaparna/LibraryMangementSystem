@@ -10,20 +10,17 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HomeComponent {
   isLoggedIn: boolean = false;
 
+
   constructor(private authService: AuthService,private router:Router) {
     this.isLoggedIn = this.authService.isAuthenticated();
   }
+  
+    
+
 
   logout() {
     this.authService.logout();
     this.router.navigate(['/welcome']);
-    
-  }
-  login(username: string, password: string) {
-   
-    this.authService.login(username, password); 
-    
-    
-    this.isLoggedIn = this.authService.isAuthenticated();
+    this.isLoggedIn = false; // Ensure isLoggedIn is updated
   }
 }

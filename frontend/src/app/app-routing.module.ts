@@ -11,7 +11,7 @@ import { UserregistrationComponent } from './components/userregistration/userreg
 import { BorrowbooksComponent } from './components/borrowbooks/borrowbooks.component';
 import { DisplaybooksComponent } from './components/displaybooks/displaybooks.component';
 import { ViewuseraccountComponent } from './components/viewuseraccount/viewuseraccount.component';
-import { FineComponent } from './components/fine/fine.component';
+
 import { ReturnbookComponent } from './components/returnbook/returnbook.component';
 import { SearchbookComponent } from './components/searchbook/searchbook.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
@@ -23,6 +23,7 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
 import { DeleteBookComponent } from './components/delete-book/delete-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { GetAllMembersComponent } from './components/get-all-members/get-all-members.component';
+import { FindbooksComponent } from './components/findbooks/findbooks.component';
 
 
 const routes: Routes = [
@@ -37,7 +38,7 @@ const routes: Routes = [
   {path: 'borrowbooks', component: BorrowbooksComponent },
   {path: 'displaybooks', component: DisplaybooksComponent },
   {path: 'viewuseraccount', component: ViewuseraccountComponent },
-  {path:'fine',component:FineComponent},
+  {path:'findbooks/:booktitle',component:FindbooksComponent},
   {path:'returnbook',component:ReturnbookComponent},
   {path:'searchbook',component:SearchbookComponent},
   {path:'admindashboard',component:AdmindashboardComponent},

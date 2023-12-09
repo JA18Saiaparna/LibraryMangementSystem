@@ -21,7 +21,7 @@ export class UserloginComponent {
   readFormData(formData: any) {
     this.authRequest.username = formData.form.value.username;
     this.authRequest.password = formData.form.value.password;
-
+    
     this.getAccessToken(this.authRequest);
   }
 

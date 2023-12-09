@@ -1,6 +1,6 @@
 export class Book {
     bookid: number=0;
-    quantity: number=0;
+    
     availablequantity: number=0;
     booktitle: string="";
     bookauthor: string="";

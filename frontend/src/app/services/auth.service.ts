@@ -12,24 +12,23 @@ export class AuthService {
   
   constructor(private jwtService: JwtClientService, private router: Router,private http: HttpClient) {}
 
- 
+  private isLoggedIn: boolean = false;
 
-  login(username: string, password: string): Observable<any> {
-    
-    return this.http.post<any>(' http://localhost:8181/api/login/userlogin', { username, password });
+  isAuthenticated(): boolean {
+    // Logic to check if the user is authenticated, maybe using tokens or stored data
+    return this.isLoggedIn;
+  }
+
+  login(username: string, password: string): void {
+    if (username === 'sita' && password === 'Sita45')
+    this.isLoggedIn = true;
   }
 
   logout(): void {
-    
-    localStorage.removeItem(this.tokenKey);
-    console.log("Token is removed");
+    // Logic to log out the user, maybe clearing tokens or stored data
+    // If logout succeeds, set isLoggedIn to false
+    this.isLoggedIn = false;
   }
-
-  isAuthenticated(): boolean {
-    
-    return !!localStorage.getItem(this.tokenKey);
-  }
-       
 
   
  

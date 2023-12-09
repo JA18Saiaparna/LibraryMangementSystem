@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/userlogin.service';
 })
 export class BorrowbooksComponent {
  
- 
+  dueDate: string=''; // Assuming dueDate is a string in ISO format (yyyy-MM-dd)
 
   constructor(private borrowService: BorrowbooksService,private router: Router) {}
 
@@ -28,6 +28,19 @@ export class BorrowbooksComponent {
       {
         this.router.navigate(['/userdashboard']); 
       }  
+
+    
+
+ 
+    
+
+      isInvalidDueDate(): boolean {
+          const currentDate = new Date().toISOString().split('T')[0]; // Get today's date in ISO format
+  
+          // Check if the due date is in the past
+          return !!this.dueDate && this.dueDate < currentDate;
+      }
+  
     
   
   

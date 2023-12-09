@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FineComponent } from './fine.component';
+import { FindbooksComponent } from './findbooks.component';
 
-describe('FineComponent', () => {
-  let component: FineComponent;
-  let fixture: ComponentFixture<FineComponent>;
+describe('FindbooksComponent', () => {
+  let component: FindbooksComponent;
+  let fixture: ComponentFixture<FindbooksComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FineComponent]
+      declarations: [FindbooksComponent]
     });
-    fixture = TestBed.createComponent(FineComponent);
+    fixture = TestBed.createComponent(FindbooksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

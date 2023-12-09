@@ -18,7 +18,7 @@ import { UserregistrationComponent } from './components/userregistration/userreg
 import { BorrowbooksComponent } from './components/borrowbooks/borrowbooks.component';
 import { DisplaybooksComponent } from './components/displaybooks/displaybooks.component';
 import { ViewuseraccountComponent } from './components/viewuseraccount/viewuseraccount.component';
-import { FineComponent } from './components/fine/fine.component';
+
 import { ReturnbookComponent } from './components/returnbook/returnbook.component';
 import { SearchbookComponent } from './components/searchbook/searchbook.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
@@ -32,6 +32,7 @@ import { GetAllBooksComponent } from './components/get-all-books/get-all-books.c
 import { DeleteBookComponent } from './components/delete-book/delete-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { GetAllMembersComponent } from './components/get-all-members/get-all-members.component';
+import { FindbooksComponent } from './components/findbooks/findbooks.component';
 
 
 
@@ -52,7 +53,7 @@ import { GetAllMembersComponent } from './components/get-all-members/get-all-mem
         BorrowbooksComponent,
         DisplaybooksComponent,
         ViewuseraccountComponent,
-        FineComponent,
+       
         ReturnbookComponent,
         SearchbookComponent,
         AdmindashboardComponent,
@@ -65,7 +66,8 @@ import { GetAllMembersComponent } from './components/get-all-members/get-all-mem
                 GetAllBooksComponent,
                 DeleteBookComponent,
                 UpdateBookComponent,
-                GetAllMembersComponent
+                GetAllMembersComponent,
+                FindbooksComponent
                 
                
     

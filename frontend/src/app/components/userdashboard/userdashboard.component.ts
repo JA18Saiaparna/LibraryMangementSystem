@@ -25,7 +25,7 @@ export class UserdashboardComponent {
   }
   findBooks(searchData:any){
 
-    this.router.navigate(['/search/'+searchData.form.value.data])
+    this.router.navigate(['/findbooks/'+searchData.form.value.data])
 
     console.log(searchData.form.value.data);
     

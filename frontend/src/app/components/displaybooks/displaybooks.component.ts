@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Book } from 'src/app/model/Book';
 import { BookService } from 'src/app/services/book.service';
@@ -10,11 +10,14 @@ import { UserService } from 'src/app/services/userlogin.service';
   templateUrl: './displaybooks.component.html',
   styleUrls: ['./displaybooks.component.css']
 })
-export class DisplaybooksComponent {
+export class DisplaybooksComponent implements OnInit {
   bookList: Book[] = []; 
   
 
   constructor(private bookService: BookService,private router:Router,private borrowbookService:BorrowbooksService) {}
+  ngOnInit(): void {
+    this.getAllBooks();
+  }
 
   getAllBooks(){
     
@@ -29,6 +32,10 @@ export class DisplaybooksComponent {
 }
 borrowBook(bookid:number){
   this.router.navigate(['/borrowbooks'])
+}
+goBack()
+{
+  this.router.navigate(['/userdashboard']);
 }
 }
 

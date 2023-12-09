@@ -50,4 +50,16 @@ export class BorrowbooksService {
       return new Observable<string>();
     }
   }
+
+  returnBook(formData:Borrow ): Observable<Borrow> {
+    const token = this.jwtservice.getToken();
+    if (token) {
+      const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+      console.log(token);
+      console.log(headers);
+      return this.http.put<Borrow>(this.baseURL + 'return',formData, { headers });
+    } else {
+      return new Observable<Borrow>();
+    }
+  }
 }

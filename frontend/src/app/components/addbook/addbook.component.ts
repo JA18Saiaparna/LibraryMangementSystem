@@ -25,5 +25,13 @@ addBook(data:Book){
       {
         this.router.navigate(['/managebooks'])
       }
+      publicationDate: string=''; 
+      isInvalidPublicationDate(): boolean {
+        const currentDate = new Date().toISOString().split('T')[0]; // Get today's date in ISO format
+
+        // Check if the publication date is in the future or today
+        return !!this.publicationDate && this.publicationDate >= currentDate;
+    }
+      
 }
 
