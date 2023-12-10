@@ -36,7 +36,7 @@ deleteMember(memberid:number){
   });}
   goBack()
   {
-    this.router.navigate(['/managebooks'])
+    this.router.navigate(['/manageusers'])
   }
 
 

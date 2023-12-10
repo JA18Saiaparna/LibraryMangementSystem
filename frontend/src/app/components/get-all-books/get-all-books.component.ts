@@ -29,14 +29,24 @@ export class GetAllBooksComponent  implements OnInit{
         
 
 }
-deleteBook(bookid:number){
-  this.bookService.deleteBook(bookid).subscribe((msg) => {
-   console.log("Book is deleted");
-    
-    alert("Book is deleted");
-  });
-  
+deleteBook(bookid: number) {
+  this.bookService.deleteBook(bookid).subscribe(
+    () => {
+      console.log("Book is deleted");
+      alert("Book is deleted");
+    },
+    (error) => {
+      if (error.status === 200) {
+        console.log("Book is deleted");
+        alert("Book is deleted");
+      } else {
+        console.error("Error deleting book:", error);
+        alert("Failed to delete book");
+      }
+    }
+  );
 }
+
 updateBook(bookid:number){
  this.router.navigate(['/updatebook']);
 }

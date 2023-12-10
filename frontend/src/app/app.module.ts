@@ -33,6 +33,8 @@ import { DeleteBookComponent } from './components/delete-book/delete-book.compon
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { GetAllMembersComponent } from './components/get-all-members/get-all-members.component';
 import { FindbooksComponent } from './components/findbooks/findbooks.component';
+import { AvailablebooksComponent } from './components/availablebooks/availablebooks.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -67,7 +69,9 @@ import { FindbooksComponent } from './components/findbooks/findbooks.component';
                 DeleteBookComponent,
                 UpdateBookComponent,
                 GetAllMembersComponent,
-                FindbooksComponent
+                FindbooksComponent,
+                AvailablebooksComponent,
+                NavbarComponent
                 
                
     

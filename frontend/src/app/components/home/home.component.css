@@ -23,11 +23,18 @@
 }
 .gradient-custom {
   /* fallback for old browsers */
-  background: #c471f5;
+  background:  #a48cb380;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+  
+}
 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
+.navbar-nav .nav-item:last-child {
+  margin-left: 10px; /* Adjust this value as needed */
+}
+.home {
+    margin-top: 200px;
+    font-size: 60px;
+    text-align:center;
+    height:270px;
 }

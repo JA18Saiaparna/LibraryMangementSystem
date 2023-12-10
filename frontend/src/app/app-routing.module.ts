@@ -24,6 +24,7 @@ import { DeleteBookComponent } from './components/delete-book/delete-book.compon
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { GetAllMembersComponent } from './components/get-all-members/get-all-members.component';
 import { FindbooksComponent } from './components/findbooks/findbooks.component';
+import { AvailablebooksComponent } from './components/availablebooks/availablebooks.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path:'findbooks/:booktitle',component:FindbooksComponent},
   {path:'returnbook',component:ReturnbookComponent},
   {path:'searchbook',component:SearchbookComponent},
+  {path:'avilablebooks',component:AvailablebooksComponent},
   {path:'admindashboard',component:AdmindashboardComponent},
   {path: 'managebooks', component: ManagebooksComponent },
   {path:'welcome',component:WelcomeComponent},
