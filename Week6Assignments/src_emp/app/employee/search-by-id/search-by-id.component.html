@@ -1,0 +1,9 @@
+<p>search-by-id works!</p>
+<form #myform="ngForm" (ngSubmit)="search(myform.value)">
+    <label for="employeeId">Employee ID:</label>
+    <input type="text" id="employeeId" name="employeeId" ngModel required>
+    <button type="submit" (click)="getAllEmployees()">Search</button>
+  </form>
+  
+      
+

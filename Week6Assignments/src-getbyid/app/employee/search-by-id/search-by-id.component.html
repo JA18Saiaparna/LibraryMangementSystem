@@ -1,0 +1,24 @@
+<p>Search Employee by ID</p>
+
+<form #myForm="ngForm" (ngSubmit)="search(myForm.value)">
+  <label for="employeeId">Enter Employee ID:</label>
+  <input type="number" id="employeeId" name="employeeId" ngModel required>
+  
+  <button type="submit">Search</button>
+</form>
+
+<table *ngIf="employee" border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+  <tr>
+    <td>{{ employee.id }}</td>
+    <td>{{ employee.ename }}</td>
+    <td>{{employee.salary}}</td>
+  </tr>
+</table>
+
+      
+

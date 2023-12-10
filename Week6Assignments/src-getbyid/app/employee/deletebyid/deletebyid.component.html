@@ -1,0 +1,8 @@
+<p>deletebyid works!</p>
+<form #myForm="ngForm" (ngSubmit)="delete(myForm.value)">
+    <label for="employeeId">Enter Employee ID which u want to delete:</label>
+    <input type="number" id="employeeId" name="employeeId" ngModel required>
+    
+    <button type="submit">Search</button>
+  </form>
+  

@@ -1,0 +1,14 @@
+<p>display-all works!</p>
+
+<button  type="button" class="btn btn-primary"  (click)="getAllProducts()" >Display All Employeess</button>
+
+<div class="container">
+<table class="table table-primary col-sm-5">
+
+   <tr><th>SNO.</th><th>PID</th><th>PNAME</th><th>PRICE</th>
+<tr *ngFor="let product of productList; index as i"><td>{{i+1}}</td> <td>{{product.pid}}</td><td>{{product.pname}}</td><td>{{product.price}}</td> 
+
+      </tr>
+
+</table>
+</div>
