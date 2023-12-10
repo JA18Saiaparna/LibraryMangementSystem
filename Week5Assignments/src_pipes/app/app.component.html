@@ -1,0 +1,12 @@
+<h1>welcome</h1>
+My salary is {{salary | currency:'INR'}}<br><br>
+The title of this page is {{Title | uppercase}}<br><br>
+slice: {{Title | slice:0:3}}<br><br>
+Today date is {{mydate | date:"fullDate"}}
+<br><br>
+Square Root : {{16 | sqrt }}
+<br><br>
+<div *ngFor="let product of productList">
+    {{ product.pid }}, {{ product.pname }}, {{ product.price }}
+  </div>
+  
